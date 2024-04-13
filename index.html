@@ -8,6 +8,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FootTaking Club 官方网站</title>
+   <style>
+        /* 隐藏子菜单 */
+        .submenu {
+            display: none;
+        }
+
+        /* 当父菜单项被点击时，显示子菜单 */
+        .menu-item.active .submenu {
+            display: block;
+        }
+    </style>
 <style>
   body {
   /* 设置背景图片 */
@@ -95,6 +106,15 @@ backdrop-filter:blur(60px);
         .playlist button {
             margin-right: 10px;
         }
+          /* 隐藏子菜单 */
+        .submenu {
+            display: none;
+        }
+
+        /* 当父菜单项被点击时，显示子菜单 */
+        .menu-item.active .submenu {
+            display: block;
+        }
 </style>
 </head>
 <body>
@@ -119,73 +139,80 @@ backdrop-filter:blur(60px);
     您的浏览器不支持audio元素。
 </audio>
   <!-- 其他页面内容 -->
-  <p>每日诗句</p>
+  <p>一言</p>
   <img src="https://v1.jinrishici.com/all.svg">
  
   <h3><b>FT(FootTakingClub)团队</b>，立足于现代科技之巅，探寻娱乐之界，传承千年古韵，演绎时代风华。我们以开发为笔，以创新为墨，书写着科技与娱乐交融的华章。古有才子佳人吟诗作赋，今有FT团队引领风尚。我们坚信，“千里之行，始于足下”，每一步的坚实，都铸就了今日的辉煌。FT团队，用智慧与激情，为您呈现一场场精彩绝伦的娱乐盛宴，让您在科技的海洋中畅游，享受古韵与现代交织的美妙体验。</h3>
   <h4><b>FT(FootTakingClub)team</b>, standing at the pinnacle of modern technology, explores the realm of entertainment, inheriting the ancient charm and interpreting the splendor of the times. With development as our pen and innovation as our ink, we compose a magnificent symphony of technology and entertainment. Just as ancient talents composed poems and essays, FT team programs and entertains, leading the trend. We firmly believe that "a journey of a thousand miles begins with a single step." The solidity of each step has forged today's glory. With wisdom and passion, the FT team presents you with one sensational entertainment feast after another, allowing you to roam freely in the ocean of technology and enjoy the wonderful experience of the intertwining of ancient charm and modernity.</h4>
-  <p>音乐播放列表</p>
-  <ul class="playlist">
+  <ul class="menu">
+    
+        音乐列表
+        <ul class="submenu">
+            <li>子菜单项 1-1</li>
+            <li>子菜单项 1-2</li>
+            <li>子菜单项 1-3</li>
+        </ul>
+    </li>
+    <script>
+    // 添加事件监听器以切换子菜单的显示
+    document.querySelectorAll('.menu-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            // 阻止点击链接时的默认行为（如果有的话）
+            e.preventDefault();
+            // 切换当前菜单项的active状态
+            this.classList.toggle('active');
+        });
+    });
+</script>
 
-    <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VmZ0lfS2NWWDJsQmtkSGk1UWFhc3pzQmxsaEp2Rk43dEtaTExTYU15RHEwNEE.mp3')">告白气球</button>
-    </li>
-    <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VVejhueWJKR0JWR3FVMUh5bzF1YnNNQjdCWUJaRUlEdWJieXlNOTBCMXVkOXc.mp3')">搁浅</button>
-    </li>
-    <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VjT05abVp3TGhWRnBHVkFNMTRLbVhVQmZfM28wandCMlh2VndKSVdjczBHMFE.mp3')">红颜如霜</button>
-    </li>
-    <!-- 更多歌曲... -->
-     <li>
-        <button onclick="https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VjWTZqbUR5c0F4R3BFMks5anVrRTN3Qk55bUJLVDBnRWIyTHBOekxIb1ROekE.mp3')">晴天</button>
-    </li>
-     <li>
-        <button onclick="playAudio(https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VRejRNVDVCVmp0SGpwV2dkcm9VT0VBQnF5VGNzWGZsT1cxa2kxNmVod3BUbHc.mp3')">一路向北</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VmOVl3Vk53eWtSS2tUTEZ3XzV0aS1jQm5PdldFWXc5bDBMU3NmZzMwZnhhSUE.mp3')">明明就</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0ViSTZISWVYWlROR3NaNkJGNVotRHc0QkdKOC10LXRjZ0xCa3ZNOHk5aklQRHc.mp3')">稻香</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkSjYtdG1qcUQxRHFXTjhkQTVmaUM0QnBtN01rb1pYY0lHYlVWRmtLMGQwMHc.flac')">圣诞星</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VSeW00bUthcEhGQWw5SW1yWk9qUlNvQmRJMUItU1NZUHFTaEgySUozNWtndEE.mp3')">错过的烟火</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VSeW00bUthcEhGQWw5SW1yWk9qUlNvQmRJMUItU1NZUHFTaEgySUozNWtndEE.mp3')">红模仿</button>
-    </li>
-     <li>
-        <button onclick="playAudio(https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VTTnBSQmVydjFkSHN2bC1IaVNkeWo4QmVKd3NhdzNJeHVlUXdJS1RDVUlHa0E.mp3')">牛仔很忙</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VkT3U5a0R2Z1psR29oZnR0TlFfSmhjQmZWU1gzVVlNQ3gzdE4zekIwczJfTGc.mp3')">Mojito</button>
-    </li>
-     <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VaZF84cWdsZ3ZOS3RKcEkwby1SMzdRQlNlOFhrb0k2VlR2VFFReGhaLVJUT0E.mp3')">不能说的秘密</button>
+            </ul>
     </li>
  <li>
-        <button onclick="playAudio('https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VXajFxbDVwMlZCRnVzQTNuTEZTZzZNQldoN2tTaHNFd3h1N3NsTDB2ZFJFWGc.mp3')">我是如此相信</button>
-    </li>
+  <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doa0MtT2NyQko5VHdlMGlu.mp3')">告白气球</button>
+</li>
+<li>
+  <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doanN5emFiOU00RG1vd0Qw.mp3')">搁浅</button>
+</li>
+<li>
+  <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doajlsc2FVdFpESGNVOWsw.mp3')">红尘客栈</button>
+</li>
 
-  
-        <button onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doaS1VZVBkS1Zpa0p2UTVL.mp3')">蒲公英的约定</button>
+    <!-- 更多歌曲... -->
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doalhYODdaUkgwUEZrNV9k.mp3')">晴天</button>
     </li>
-        <li>
-
-  
-        <button onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doakNxMjRYZVpLeF9ac29o.mp3')">夜曲</button>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doakNxMjRYZVpLeF9ac29o.mp3')">夜曲</button>
     </li>
-        <li>
-        <button onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doakZsXzBobFBrU3BSN3ky.mp3')">兰亭序</button>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doaktKc3p3NjQtZTB1MmR6.mp3')">明明就</button>
     </li>
-        <li>
-
-  
-        <button onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doalFsVkRuWG8wYXJsTkVO.mp3')">反方向的钟</button>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doanJKN2tvZ2hhVUpEci1X.mp3')">稻香</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doanpxVG41elIxem1DNUZB.mp3')">圣诞星</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doa0VGbTcyVll6NjRrcEpl.mp3')">错过的烟火</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doa0p4Tjc5ZUE1WmxMNHZ0.mp3')">红模仿</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doakZsXzBobFBrU3BSN3ky.mp3')">兰亭序</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doamluMWs2UHVnZ3VxbElM.mp3')">Mojito</button>
+    </li>
+     <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doam1zT2RoNWNNenZhRFJJ.mp3')">青花瓷</button>
+    </li>
+ <li>
+        <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doamZXbXE1ME8xMFNiUlcz.mp3')">我是如此相信</button>
+    </li>
+  <li>
+         <button class="button" onclick="playAudio('https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBdXdhOUVJSXhiN2doaS1VZVBkS1Zpa0p2UTVL.mp3')">蒲公英的约定</button>
     </li>
 </ul>
 <script>
@@ -196,6 +223,17 @@ backdrop-filter:blur(60px);
         audioElement.load(); // 加载新歌曲
         audioElement.play(); // 播放歌曲
     }
+</script>
+       <script>
+    // 添加事件监听器以切换子菜单的显示
+    document.querySelectorAll('.menu-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            // 阻止点击链接时的默认行为（如果有的话）
+            e.preventDefault();
+            // 切换当前菜单项的active状态
+            this.classList.toggle('active');
+        });
+    });
 </script>
    <div class="footer">
         <a href="https://icp.gov.moe/?keyword=20240163" target="_blank">萌ICP备20240163号</a>
